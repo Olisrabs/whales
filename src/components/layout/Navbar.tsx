@@ -65,12 +65,12 @@ export default function Navbar() {
               src={theme === "dark" ? "/src/assets/images/logo-white.png" : "/src/assets/images/logo-black.png"}
               alt="Whales Visual Logo"
               className="h-8 md:h-10 object-contain"
-              onError={(e) => {
+              {/* onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.src = theme === "dark"
                     ? "/src/assets/images/logo-white.png"
                     : "/src/assets/images/logo-black.png";
-              }}
+              }} */}
             />
           </Link>
 
