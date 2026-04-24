@@ -67,7 +67,9 @@ export default function Navbar() {
               className="h-8 md:h-10 object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
-                target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='serif' font-size='24' fill='%23000000'%3EWHALES VISUAL%3C/text%3E%3C/svg%3E";
+                target.src = theme === "dark"
+                    ? "/src/assets/images/logo-white.png"
+                    : "/src/assets/images/logo-black.png";
               }}
             />
           </Link>
@@ -133,8 +135,8 @@ export default function Navbar() {
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = theme === "dark"
-                    ? "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='serif' font-size='24' fill='%23ffffff'%3EWHALES VISUAL%3C/text%3E%3C/svg%3E"
-                    : "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='60' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='serif' font-size='24' fill='%23000000'%3EWHALES VISUAL%3C/text%3E%3C/svg%3E";
+                    ? "/src/assets/images/logo-white.png"
+                    : "/src/assets/images/logo-black.png";
                 }}
               />
               <button
